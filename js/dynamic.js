@@ -71,7 +71,7 @@ $(document).ready(function() {
 		$input.change();
 		return false;
 	});
-	$('.header .basket .more').bind('click', function() {
+	$('.header .basket > .more').bind('click', function() {
 		$(this).parent().toggleClass('active');
 		$(this).hide();
 		return false;
@@ -79,13 +79,19 @@ $(document).ready(function() {
 	$('html').bind('click', function() {
 		if ( $('.header .basket').hasClass('active') ) {
 			$('.header .basket').removeClass('active');
-			$('.basket .more').show();
+			$('.basket > .more').show();
 		}
 	});
-	$('.basket > div, .basket .more').click(function(event){
+	$('.basket > div, .basket > div > .more').click(function(event){
 		event.stopPropagation();
 	});
-	$('.slider .options button').bind('click', function() {
+	$('.basket > div > .more').bind('click', function() {
+		$('.header .basket').removeClass('active');
+		$('.basket > .more').show();
+		$(window).scrollTop($(window).scrollTop());
+		return false;
+	});
+	$('.slider .options button, .catalog > div .options button').bind('click', function() {
 		$('img.moving').remove();
 		var target = $(this).parent().parent().find('.picture img');
 		$('<img src="'+target.attr('src')+'" style="position:fixed; left:'+target.offset().left+'px; top:'+eval(target.offset().top-$(window).scrollTop())+'px; z-index:1000; width:'+target.attr('width')+'px; height:'+target.attr('height')+'px; border-radius:5px" class="moving">').appendTo('body').animate({
@@ -96,4 +102,40 @@ $(document).ready(function() {
 			'border-radius': '50%'
 		}, 1000, 'easeInBack', function() {$(this).delay(500).fadeOut(500)});
 	});
+	var delivery;
+	var payment;
+	var bh = 0;
+	$('button.order').bind('click', function() {
+		$('.fade, .orderoptions').fadeIn(250);
+		$('.orderoptions .delivery').slideDown(750, 'easeInOutCirc');
+		bh = $('body').scrollTop();
+		$('body').css({'position': 'fixed', 'top': -bh+'px', 'overflow-y': 'scroll'});
+		return false;
+	});
+	$('.orderoptions .delivery li a').bind('click', function() {
+		delivery = $(this).attr('data-value');
+		$('.orderoptions .delivery').slideUp(750, 'easeInOutCirc');
+		$('.orderoptions .payment').slideDown(750, 'easeInOutCirc');
+		$('.orderoptions .payment li').removeClass('active');
+		console.log('Способ получения: '+delivery+'.');
+		return false;
+	});
+	$('.orderoptions .payment li a').bind('click', function() {
+		payment = $(this).attr('data-value');
+		$(this).parent().addClass('active');
+		$('.orderoptions .payment').slideUp(750, 'easeInOutCirc');
+		$('.fade, .orderoptions').delay(500).fadeOut(250);
+		console.log('Способ оплаты: '+payment+'.');
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').scrollTop(bh);
+		return false;
+	});
+	$('.fade').bind('click', function() {
+		$('.orderoptions ul').slideUp(750, 'easeInOutCirc');
+		$('.fade, .orderoptions').delay(500).fadeOut(250);
+		$('body').css({'position': 'static', 'top': '0', 'overflow-y': 'auto'});
+		$('body').scrollTop(bh);
+		return false;
+	});
+	$('.catalog > div:nth-child(3n), .gallery li:nth-child(3n)').css({'margin-right': '0'});
 });
