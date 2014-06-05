@@ -1,0 +1,928 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Мацури</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+	<script type="text/javascript">
+		function preload(arrayOfImages) {
+			$(arrayOfImages).each(function(){
+				$('<img>')[0].src = this;
+			});
+		}
+		preload([
+			'./img/offer0.jpg',
+			'./img/offer1.jpg',
+			'./img/offer2.jpg',
+			'./img/offer3.jpg',
+			'./img/offer4.jpg',
+		]);
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<a href="#"><img src="./img/logo.png" width="176" height="167" class="logo" alt=""></a>
+			<div class="phone">
+				<p>Телефон доставки:</p>
+				<h3>+7 (3852) 581-185</h3>
+				<h6>С 9:00 до 23:00</h6>
+			</div>
+			<ul class="menu">
+				<li>
+					<a href="#">Доставка</a>
+					<ul>
+						<li><a href="#">Пицца</a></li>
+						<li><a href="#">Суши</a></li>
+						<li><a href="#">Роллы</a></li>
+						<li><a href="#">Салаты</a></li>
+						<li><a href="#">Напитки</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Офисное меню</a></li>
+				<li><a href="#">Домашний Повар</a></li>
+				<li><a href="#">Выезды</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="basket">
+				<h3>Корзина</h3>
+				<div>
+					<div>
+						<p>Супреме Спайс</p>
+						<h6>
+							<span class="minus"></span>
+							<input type="text" value="1">
+							<span class="plus"></span>
+						</h6>
+						<h5>240<em>p</em></h5>
+					</div>
+					<div>
+						<p>Прима Вере</p>
+						<h6>
+							<span class="minus"></span>
+							<input type="text" value="1">
+							<span class="plus"></span>
+						</h6>
+						<h5>240<em>p</em></h5>
+					</div>
+					<div>
+						<p>Супреме Спайс</p>
+						<h6>
+							<span class="minus"></span>
+							<input type="text" value="1">
+							<span class="plus"></span>
+						</h6>
+						<h5>240<em>p</em></h5>
+					</div>
+					<div>
+						<p>Прима Вере</p>
+						<h6>
+							<span class="minus"></span>
+							<input type="text" value="1">
+							<span class="plus"></span>
+						</h6>
+						<h5>240<em>p</em></h5>
+					</div>
+					<h4><span>Итого:</span> 1 540<em>p</em></h4>
+					<button>Оформить заказ</button>
+				</div>
+				<p class="more">Еще</p>
+			</div>
+		</div>
+		<div class="offers">
+			<div class="container">
+				<div>
+					<div>
+						<h3>Подарок при доставке!</h3>
+						<p>При заказе от 2500 рублей</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h3>Акция на роллы!</h3>
+						<p>При заказе от 1000 рублей</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h3>Подарок при доставке!</h3>
+						<p>При заказе от 2500 рублей</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h3>Акция на роллы!</h3>
+						<p>При заказе от 1000 рублей</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h3>Акция на роллы!</h3>
+						<p>При заказе от 1000 рублей</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider">
+			<div>
+				<h2><a href="#">Пицца</a></h2>
+				<div>
+					<div class="container">
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide1.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Альфа Ромео</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5 class="special">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide2.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Прима вере</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide3.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Супреме Спайс</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5 class="hit">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide3.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Супреме Спайс</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5 class="hit">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide1.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Альфа Ромео</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5 class="special">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide2.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Прима вере</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide1.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Альфа Ромео</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5 class="special">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide2.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Прима вере</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide3.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Супреме Спайс</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5 class="hit">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide3.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Супреме Спайс</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5 class="hit">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide1.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Альфа Ромео</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5 class="special">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide2.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Прима вере</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide1.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Альфа Ромео</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5 class="special">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide2.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Прима вере</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide3.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Супреме Спайс</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5 class="hit">289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2><a href="#">Роллы</a></h2>
+				<div>
+					<div class="container">
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide4.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Филадельфия</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide5.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке-маки</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide6.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Калифорния</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide6.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Калифорния</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide4.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Филадельфия</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide5.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке-маки</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide4.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Филадельфия</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide5.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке-маки</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide6.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Калифорния</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide6.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Калифорния</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide4.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Филадельфия</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide5.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке-маки</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide4.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Филадельфия</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide5.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке-маки</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide6.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Калифорния</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2><a href="#">Суши</a></h2>
+				<div>
+					<div class="container">
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide7.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Унаги</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide8.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Икура</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide9.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide9.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide7.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Унаги</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide8.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Икура</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide7.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Унаги</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide8.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Икура</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide9.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide9.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide7.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Унаги</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide8.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Икура</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide7.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Унаги</a></h3>
+								<p>Сервелат Венский, Бекон, Шампиньоны свежие, Зеленый лук, Сыр Чеддер, Сыр Моцарелла, Соус для пиццы, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide8.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Икура</a></h3>
+								<p>Ветчина, Шампиньоны свежие, Сыр Моцарелла, Сыр Гауда, Кунжут, Соус для пиццы, Специи.</p>
+								<h5>350<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+							<div>
+								<div class="picture">
+									<a href="#"><img src="./pic/slide9.jpg" width="220" height="153" alt=""></a>
+								</div>
+								<h3><a href="#">Сяке</a></h3>
+								<p>Колбаски Кобаносси, Перец Болгарский, Сыр Моцарелла, Сыр Гауда, Соус для пиццы, Зелень, Специи.</p>
+								<h5>289<em>p</em></h5>
+								<div class="options">
+									<h6>
+										<span class="minus">-</span>
+										<input type="text" value="1">
+										<span class="plus">+</span>
+									</h6>
+									<button>Купить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="index">
+			<h3>Доставка суши, роллов по Барнаулу</h3>
+			<p>Если же вам не хочется выходить из дома – служба доставки японской кухни Мацури готова принять ваш заказ практически круглосуточно, а шефы наших суши-баров с удовольствием приготовят для вас ваши любимые деликатесы. Вы можете заказать доставку блюд из меню суши-бара «Мацури» по Барнаулу. Доставка суши, роллов, сашими и других блюд японской кухни осуществляется бесплатно при сумме заказа не менее 990 рублей.</p>
+			<h3>Блюда японской кухни</h3>
+			<p>При создании нашего меню мы используем оригинальные рецепты и соблюдаем традиции настоящей японской кухни. Всегда свежие продукты, широкий выбор блюд и специальное отношение к клиентам – вот секрет нашего успеха и вашего хорошего настроения.</p>
+			<h3>Заказать суши, роллы круглосуточно</h3>
+			<p>Заказ суши и других блюд японской кухни можно сделать по телефону (495) 234-24-24 или online. Быстрая доставка суши, роллов, сашими и горячих блюд на дом и в офис осуществляется с 10:00 до 05:00.  Некоторые наши рестораны осуществляют доставку суши 24 часа в сутки в пределах своего района. Если вы хотите отведать самые вкусные роллы и суши в японском ресторане Москвы – просто приходите к нам, ведь мы всегда рядом!</p>
+		</div>
+		<div class="footer">
+			<div>
+				<div class="phone">
+					<p>Телефон доставки:</p>
+					<h3>+7 (3852) 581-185</h3>
+					<h6>С 9:00 до 23:00</h6>
+				</div>
+				<p class="copy">© 2014 Служба доставки «Мацури»</p>
+				<ul class="social">
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="32" height="32" alt=""></a></li>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="32" height="32" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="32" height="32" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
