@@ -544,6 +544,9 @@ button::-moz-focus-inner {
 	text-shadow:3px 3px 0 rgba(0,0,0,0.45);
 	margin:0 0 5px;
 }
+.offers img.big {
+	display:none;
+}
 .slider {
 	width:938px;
 	padding:7px 0 10px;

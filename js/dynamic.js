@@ -29,7 +29,7 @@ $(document).ready(function() {
 	if ( $('.offers').length > 0 ) {
 		$('body').css({'background-image': 'none'});
 		$('body').append('<div class="bg" style="height:'+$('.wrapper').height()+'px"></div>');
-		$('.bg').css({'background-image': 'url("./img/offer0.jpg")'});
+		$('.bg').css({'background-image': 'url("'+$('.offers .container').children('div:nth-child(1)').find('img.big').attr('src')+'")'});
 		$('.offers').slides({
 			generatePagination: true,
 			generateNextPrev: false,
@@ -42,7 +42,8 @@ $(document).ready(function() {
 				$('.bg').fadeOut(500);
 			},
 			animationComplete: function() {
-				$('.bg').css({'background-image': 'url("./img/offer'+$('.offers').find('.pagination li.current').index()+'.jpg")'})
+				var current = $('.offers .pagination li.current').index()+1;
+				$('.bg').css({'background-image': 'url("'+$('.offers .slides_control').children('div:nth-child('+current+')').find('img.big').attr('src')+'")'});
 				$('.bg').fadeIn(500);
 			}
 		});
